@@ -1,0 +1,6 @@
+/* containers */
+.clearfix,
+.zfix,
+.easyfix {
+	zoom: 1;
+}
