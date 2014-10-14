@@ -87,7 +87,12 @@ a.header-cart {text-decoration: none;}
 .header-gender a.male.current {background-position: -54px 0;}
 .header-gender a.female {background-position: 0 -32px;width: 30px;margin-top: 8px;}
 .header-gender a.female.current {background-position: -50px -32px;}
-.nav {margin-top: 13px;background: #ff8f63;}
+.nav {margin-top: 13px;background: #ff8f63;font-size: 0;}
+.nav-drop {display: inline-block;vertical-align: middle;}
+.nav-opener {display: inline-block;vertical-align: middle;}
+.nav ul {display: inline-block;vertical-align: middle;margin: 0 0 0 25px;padding: 0;list-style: none;}
+.nav ul li {display: inline-block;vertical-align: middle;margin-left: 30px;}
+.nav ul li:first-child {margin-left: 0;}
 .logo {display: inline-block;vertical-align: middle;width: 288px;height: 36px;background: url(../images/bg/logo.png) 0 0 no-repeat;text-indent: -9999px;overflow: hidden;}
 .logo a {display: block;width: 100%;height: 100%;}
 .header-data {display: inline-block;vertical-align: middle;margin-left: 35px;width: 425px;}
@@ -116,6 +121,23 @@ a.header-cart {text-decoration: none;}
 .footer-logo {display: block;}
 
 /* content */
+.bg-content {background: #fff;}
+.text-space {padding: 30px 40px 40px 45px;}
+.promo {position: relative;width: 900px;margin: 12px auto 0;height: 321px;background: url(../images/bg/promo.png) 0 0 no-repeat;padding: 30px;}
+.promo-img {position: relative;width: 900px;height: 321px;overflow: hidden;}
+.promo-img {display: block;}
+.promo-prev,
+.promo-next {position: absolute;top: 170px;left: 100%;width: 57px;height: 57px;margin-left: -30px;background: #ff5f4b url(../images/bg/promo-btns.png);text-indent: -9999px;overflow: hidden;}
+.promo-prev.disabled,
+.promo-next.disabled {background-color: #ff8f63;cursor: default;}
+.promo-prev {margin-left: -87px;}
+.promo-next {background-position: -57px 0;}
+.promo-thumbs {position: absolute;bottom: 0;left: 67px;}
+.promo-thumbs a {float: left;margin-right: 5px;padding: 5px;font: 18px/20px 'bebas_neuebold',sans-serif;color: #3f3835;text-decoration: none;-webkit-transition: color .25s linear, background .25s linear;-o-transition: color .25s linear, background .25s linear;transition: color .25s linear, background .25s linear;}
+.promo-thumbs a:hover,
+.promo-thumbs a.current {color: #fff;background: #544945;}
+.promo-loading {position: absolute;left: 50%;top: 50%;opacity: 0;-webkit-transition: opacity .25s ease, transform .25s ease;-o-transition: opacity .25s ease, transform .25s ease;transition: opacity .25s ease, transform .25s ease;width: 0;height: 0;margin: -30px 0 0 -30px;background: #000 url(../images/bg/loading-digit.gif) 50% no-repeat;border-radius: 30px;text-indent: -9999px;overflow: hidden;-webkit-transform: scale(1.25);-ms-transform: scale(1.25);-o-transform: scale(1.25);transform: scale(1.25);}
+.promo.loading .promo-loading {width: 60px;height: 60px;opacity: 1;-webkit-transform: scale(1);-ms-transform: scale(1);-o-transform: scale(1);transform: scale(1);}
 .page-header {color: #3f3535;margin: 0;padding: 15px 0;font: 31px/33px 'bebas_neuebold',sans-serif;}
 .cat {width: 980px;margin-left:-20px; padding-bottom: 50px;}
 .cat-item {position: relative;background: #fff;height: 485px;float: left;width: 470px;margin-left: 20px;cursor: pointer;}
