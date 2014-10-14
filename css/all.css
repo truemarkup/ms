@@ -152,6 +152,8 @@ a.header-cart {text-decoration: none;}
 .cat-brand span:first-child {padding: 10px 10px 0;}
 .cat-title {position: absolute;left: 30px;bottom: 30px;width: 415px;font: 35px/38px 'bebas_neuebold',sans-serif;color: #fff;}
 .nav {margin: 17px 0;}
+.category-header {text-align: center;margin:0;padding: 14px 2px 50px;background: url(../images/bg/category-header.png) 50% 35px no-repeat,url(../images/bg/mark.png) 100px 62px no-repeat;color: #fff;font: 42px/40px 'bebas_neuebold',sans-serif;text-transform: uppercase;}
+.category-header span {display: inline-block;border: solid #fff;border-width: 2px 0;margin-top:35px;}
 .cat-sale {border-radius: 37px; width: 65px;text-align: center;position: absolute;bottom: 135px;left: 40px;border: 5px solid #fff;color: #fff;font: 34px/65px 'bebas_neuebold',sans-serif;}
 .cat-sale.warn {color: #f00;border-color: #f00;}
 .logo-footer {height: 116px; width: 941px;padding-bottom: 80px;}
@@ -162,3 +164,8 @@ a.header-cart {text-decoration: none;}
 .cat-basket:after {content: ""; background-image: url(../images/bg/popup-up.png); height: 6px;top: -5px;width: 195px; left: 0;position: absolute;}
 .cat-basket:before {content: ""; background-image: url(../images/bg/popup.png); height: 6px;bottom: -6px;width: 195px; left: 0;position: absolute;}
 .cat-border {border-radius: 40px; width: 66px;border: 5px solid #fff;height: 66px;margin: 20px auto 0;background: url(../images/bg/basket.png) 50% no-repeat;}
+.page-header-text {font: 22px/25px 'bebas_neuebold',sans-serif; padding: 0 0 23px 0;}
+.text-page-seo{font: 23px/26px 'Arial',sans-serif; color: #ff5f4b;}
+.text-page-bg {color: #3f3535;}
+.text-page {background:#3f3535;}
+.text-page-bg {background-color: #fff;padding: 36px 45px 22px;margin:0 55px 67px 55px;}
