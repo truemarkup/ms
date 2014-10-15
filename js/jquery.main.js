@@ -113,8 +113,62 @@ ms.promo = {
   }
 };
 
+ms.nav = function() {
+  $('div.nav-opener').each(function() {
+    var nav = $(this),
+        nav_drop = $('div.nav-drop', nav),
+        nav_opener = $('> a', nav),
+        nav_drop_list = $('> ul', nav_drop),
+        nav_drop_item = $('> li', nav_drop_list);
+
+    nav_opener.on('click.nav', function() {
+      if ( nav.hasClass('open') ) {
+        nav.removeClass('open');
+        nav_drop.fadeOut(250);
+      } else {
+        nav.addClass('open');
+        nav_drop.fadeIn(250);
+      }
+      return false;
+    });
+
+    nav_drop_item.each(function() {
+      var that = $(this);
+
+      if ( !that.hasClass('open') ) {
+        that.find('ul').hide();
+      }
+    });
+
+    $('> a', nav_drop_item).on('click.drop', function() {
+      var that = $(this).parent();
+
+      if ( that.hasClass('open') ) {
+        $('ul', that).slideUp(250, function() {
+          that.removeClass('open');
+        });
+      } else {
+        that.addClass('open');
+        $('ul', that).slideDown(250);
+      }
+
+      return false;
+    });
+
+    $(document).on('click', function(e) {
+      var target = $(e.target);
+
+      if ( !target.hasClass('nav-opener') && target.parents('div.nav-opener').length === 0 ) {
+        nav.removeClass('open');
+        nav_drop.fadeOut(250);
+      }
+    });
+  });
+};
+
 ms.init = function() {
   ms.promo.init();
+  ms.nav();
   $('.mask-phone').mask('+7 999 999 99 99');
 };
 
