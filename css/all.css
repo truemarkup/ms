@@ -185,5 +185,4 @@ a.header-cart {text-decoration: none;}
 .breadcrumbs {margin:0;padding: 0;list-style: none; }
 .breadcrumbs li {display: inline-block;font: 13px/16px 'calibriregular',sans-serif;}
 .breadcrumbs li:last-child {color: #2f3843;}
-    font-family: 'calibriregular';
-
+.breadcrumbs-home {background: #544945;padding: 10px 10px;border: 1px solid #000;}
