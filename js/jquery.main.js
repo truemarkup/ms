@@ -121,6 +121,29 @@ ms.nav = function() {
         nav_drop_list = $('> ul', nav_drop),
         nav_drop_item = $('> li', nav_drop_list);
 
+    nav_drop_item.each(function() {
+      var that = $(this);
+
+      if ( !that.hasClass('open') && !that.hasClass('active') ) {
+        that.find('ul').hide();
+      }
+    });
+
+    function _resetAside() {
+      if ( nav.hasClass('static') ) {
+        $('div.aside').css({
+          paddingTop: nav_drop.height()
+        });
+        return;
+      }
+    }
+
+    _resetAside();
+
+    $(window).on('load.nvg', function() {
+      _resetAside()
+    });
+
     nav_opener.on('click.nav', function() {
       if ( nav.hasClass('open') ) {
         nav.removeClass('open');
@@ -130,14 +153,6 @@ ms.nav = function() {
         nav_drop.fadeIn(250);
       }
       return false;
-    });
-
-    nav_drop_item.each(function() {
-      var that = $(this);
-
-      if ( !that.hasClass('open') ) {
-        that.find('ul').hide();
-      }
     });
 
     $('> a', nav_drop_item).on('click.drop', function() {
@@ -166,9 +181,77 @@ ms.nav = function() {
   });
 };
 
+ms.news = function() {
+  function onAfterNews(curr, next, opts) {
+    var index = opts.currSlide;
+
+    if ( index === 0 ) {
+      $('#news_prev').addClass('disabled');
+    } else {
+      $('#news_prev').removeClass('disabled');
+    }
+
+    if ( index === opts.slideCount - 1 ) {
+      $('#news_next').addClass('disabled');
+    } else {
+      $('#news_next').removeClass('disabled');
+    }
+  }
+
+  $('#news_carousel').cycle({
+    fx:     'fade',
+    slides: "> div.cycle-item",
+    prev:   '#news_prev',
+    next:   '#news_next',
+    after:   onAfterNews,
+    timeout: 0
+  });
+};
+
+ms.customForm = function() {
+  $('div.custom-inputs').urInputs({
+    replaceCheckboxes: true,
+    replaceRadios: true
+  });
+};
+
+ms.order = function() {
+  var order_form = $('div.order-form');
+  order_form.hide();
+
+  $('a.l-order-open').on('click.ord', function() {
+    order_form
+      .toggleClass('open')
+      .slideToggle(400);
+    return false;
+  });
+
+  $('a.l-open-more').on('click', function() {
+    $(this).closest('tr').addClass('open-order');
+    return false;
+  });
+
+  $(document).on('click', function(e) {
+    var target = $(e.target);
+
+    if ( !target.hasClass('open-order') && target.parents('tr.open-order').length === 0 ) {
+      $('tr.open-order').removeClass('open-order');
+    }
+  });
+
+  $('a.l-cart-rem').on('click', function() {
+    $(this).parents('tr.open-order').removeClass('open-order');
+    return false;
+  });
+};
+
 ms.init = function() {
   ms.promo.init();
   ms.nav();
+  ms.news();
+  ms.customForm();
+  ms.order();
+
   $('.mask-phone').mask('+7 999 999 99 99');
 };
 
