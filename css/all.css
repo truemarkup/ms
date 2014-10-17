@@ -107,7 +107,7 @@ a.header-cart {text-decoration: none;}
 .nav i.nav2 {background-position: -30px 0;}
 .nav i.nav3 {background-position: -60px 0;}
 .nav i.nav4 {background-position: -90px 0;}
-.nav-drop {display: none;position: absolute;left: 0;top: 100%;width: 100%;background: #ff5f4b;z-index: 2;}
+.nav-drop {display: none;position: absolute;left: 0;top: 100%;width: 100%;background: #ff5f4b;z-index: 5;}
 .nav-opener.opened .nav-drop {display: block;}
 .nav-drop ul {margin: 0;padding: 0 10px 9px;list-style: none;}
 .nav-drop ul li {font: 12px/14px Arial,sans-serif;padding: 2px 0;text-transform: uppercase;}
@@ -368,6 +368,23 @@ textarea.field {resize: none;overflow: auto;}
 .l-load-all {display: block;width: 290px;text-align: center;color: #000;font: 22px/24px 'bebas_neuebold',sans-serif;padding: 10px;text-transform: uppercase;border: 5px solid #ff5f4b;text-decoration: none;margin: 10px auto 0;}
 .badge-popular {position: absolute;font: 22px/25px 'bebas_neuebold',sans-serif;background: #ffed1f;color: #000;padding: 3px 8px;}
 .badge-new {position: absolute;font: 22px/25px 'bebas_neuebold',sans-serif;background: #ff5f4b;color: #fff;padding: 3px 8px;}
+.product {padding: 30px 35px 35px 25px;background: #fff;margin-top: 15px;}
+.product-img {float: left;width: 420px;position: relative;}
+.product-thumbs {font-size: 0;padding-top: 30px;margin-left: -15px;}
+.product-thumbs a {display: inline-block;vertical-align: middle;width: 72px;height: 72px;position: relative;margin: 15px 0 0 15px;}
+.product-thumbs img {display: inline-block;vertical-align: middle;border: 1px solid #b5bfc9;}
+.product-thumbs a:before {content: "";opacity: 0;-webkit-transition: opacity .25s linear;-o-transition: opacity .25s linear;transition: opacity .25s linear;}
+.product-thumbs .current:before,
+.product-thumbs a:hover:before {opacity: 1;position: absolute;left: 0;top: 0;width: 100%;height: 100%;border: 3px solid #ff8f63;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.product-thumbs .current,
+.product-thumbs .current * {cursor: default;}
+.product-logo {display: block;margin-bottom: 30px;}
+.product-data {color: #3f3535;padding-top: 5px;}
+.product-data p {margin: 0;font: 11px/13px Arial,sans-serif;}
+.product-data span {color: #bba8a8;}
+.product-params {padding: 8px;background: #cecec9;margin-top: 24px;}
+.product-params.size {margin-top: 12px;border: 1px solid #b5bfc9;}
+.item-header {padding: 35px 0 20px;font: 22px/24px 'bebas_neuebold',sans-serif;background: url(../images/bg/item-header.png) 0 100% repeat-x;text-transform: uppercase;color: #3f3535;}
 .cat-item.cat-item-xsm .cat-sale {bottom: 220px;left: 75px;}
 .cat-item:hover {z-index: 3;}
 .cat-popup-preview {position: absolute;left: 0;top: -20px;overflow: hidden;opacity: 0;transition: all .25s linear;width: 230px;background-color: #fff;-moz-box-shadow: 0 5px 98px #211818;-webkit-box-shadow: 0 5px 98px #211818;box-shadow: 0 5px 98px #211818;z-index: 2;}

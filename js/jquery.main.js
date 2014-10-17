@@ -170,14 +170,16 @@ ms.nav = function() {
       return false;
     });
 
-    $(document).on('click', function(e) {
-      var target = $(e.target);
+    if ( !nav.hasClass('static') ) {
+      $(document).on('click', function(e) {
+        var target = $(e.target);
 
-      if ( !target.hasClass('nav-opener') && target.parents('div.nav-opener').length === 0 ) {
-        nav.removeClass('open');
-        nav_drop.fadeOut(250);
-      }
-    });
+        if ( !target.hasClass('nav-opener') && target.parents('div.nav-opener').length === 0 ) {
+          nav.removeClass('open');
+          nav_drop.fadeOut(250);
+        }
+      });
+    }
   });
 };
 
