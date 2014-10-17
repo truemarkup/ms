@@ -370,9 +370,14 @@ textarea.field {resize: none;overflow: auto;}
 .badge-new {position: absolute;font: 22px/25px 'bebas_neuebold',sans-serif;background: #ff5f4b;color: #fff;padding: 3px 8px;}
 .cat-item.cat-item-xsm .cat-sale {bottom: 220px;left: 75px;}
 .cat-item:hover {z-index: 3;}
-.cat-popup-preview {position: absolute;left: 0;top: 0;overflow: hidden;opacity: 0;transition: all .25s linear;width: 230px;background-color: #fff;-moz-box-shadow: 0 5px 98px #211818;-webkit-box-shadow: 0 5px 98px #211818;box-shadow: 0 5px 98px #211818;z-index: 2;}
-.cat-item:hover .cat-popup-preview {width: 270px;left: -20px;top: -10px;overflow: visible;opacity: 1;}
+.cat-popup-preview {position: absolute;left: 0;top: -20px;overflow: hidden;opacity: 0;transition: all .25s linear;width: 230px;background-color: #fff;-moz-box-shadow: 0 5px 98px #211818;-webkit-box-shadow: 0 5px 98px #211818;box-shadow: 0 5px 98px #211818;z-index: 2;}
+.cat-popup-preview .cat-title-bl {opacity: 0;-webkit-transition: opacity .25s .05s linear;-o-transition: opacity .25s .05s linear;transition: opacity .25s .05s linear;}
+.cat-item:hover .cat-popup-preview .cat-title-bl {opacity: 1;}
+.cat-item:hover .cat-popup-preview {width: 270px;left: -23px;top: -10px;overflow: visible;opacity: 1;}
 .cat-popup-preview .cat-item-xsm {margin-left: 0;padding: 10px 0 0;width: 230px;margin: auto;position: relative;}
 .cat-popup-cart {background: #ff5f4b;position: relative;transition: all .25s linear;}
 .cat-item:hover .cat-popup-cart {padding: 15px;}
 .cat-popup-cart:before {content: "";position: absolute;left: 50%;top: -24px;width: 0;height: 0;border: outset transparent;border-width: 12px 16px;margin-left: -16px;border-bottom-color: #ff5f4b;border-bottom-style: solid;}
+.basket-sm {display: block;width: 45px;height: 45px;border: 5px solid #fff;margin: auto;text-indent: -9999px;overflow: hidden;text-align: left;background: url(../images/bg/basket-sm.png) 50% no-repeat;border-radius: 28px;}
+.cat-popup-label {font: 27px/30px 'bebas_neuebold',sans-serif;text-align: center;color: #fff;padding: 0 0 10px;}
+.cat-popup-more {display: block;border: 2px solid #fff;text-align: center;width: 100px;text-decoration: none;font: 13px/19px 'bebas_neuebold',sans-serif;text-transform: uppercase;padding: 5px 0;margin: 20px auto 0;color: #fff;}
