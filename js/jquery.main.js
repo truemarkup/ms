@@ -245,12 +245,73 @@ ms.order = function() {
   });
 };
 
+ms.filter = function() {
+  $('div.filter').each(function() {
+    var filter = $(this),
+        filter_panel = $('div.filter-panel', filter);
+
+    filter_panel.each(function() {
+      var fpane = $(this),
+          fslide = $('div.filter-slide', fpane),
+          fopen = $('a.filter-opener', fpane);
+
+      if ( !fpane.hasClass('open') ) {
+        fslide.hide();
+      }
+
+      fopen.on('click', function() {
+        if ( fpane.hasClass('open') ) {
+          fpane.removeClass('open');
+          fslide.slideUp(400);
+        } else {
+          fpane.addClass('open');
+          fslide.slideDown(400);
+        }
+        return false;
+      });
+    });
+  });
+
+  var slider = $('#slider'),
+      slider_1 = $('#slider_1'),
+      slider_2 = $('#slider_2'),
+      handle,
+      slider_v_1, slider_v_2;
+
+  slider.slider({
+    range: true,
+    min: 0,
+    max: 45000,
+    step: 100,
+    values: [ 5000, 20000 ],
+    slide: function( event, ui ) {
+      slider_v_1 = ui.values[0].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1.');
+      slider_v_2 = ui.values[1].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1.');
+      slider_1.val( slider_v_1 );
+      slider_2.val( slider_v_2 );
+      handle.eq(0).attr('data-value', slider_v_1);
+      handle.eq(1).attr('data-value', slider_v_2);
+    }
+  });
+
+  handle = $('.ui-slider-handle', slider);
+
+  slider_v_1 = slider.slider('values', 0).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1.');
+  slider_v_2 = slider.slider('values', 1).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1.');
+
+  slider_1.val( slider_v_1 );
+  slider_2.val( slider_v_2 );
+  handle.eq(0).attr('data-value', slider_v_1);
+  handle.eq(1).attr('data-value', slider_v_2);
+};
+
 ms.init = function() {
   ms.promo.init();
   ms.nav();
   ms.news();
   ms.customForm();
   ms.order();
+  ms.filter();
 
   $('.mask-phone').mask('+7 999 999 99 99');
 };
