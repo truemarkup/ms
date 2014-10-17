@@ -366,3 +366,13 @@ textarea.field {resize: none;overflow: auto;}
 .slider-label.min {left: 2px;}
 .slider-label.max {right: 2px;}
 .l-load-all {display: block;width: 290px;text-align: center;color: #000;font: 22px/24px 'bebas_neuebold',sans-serif;padding: 10px;text-transform: uppercase;border: 5px solid #ff5f4b;text-decoration: none;margin: 10px auto 0;}
+.badge-popular {position: absolute;font: 22px/25px 'bebas_neuebold',sans-serif;background: #ffed1f;color: #000;padding: 3px 8px;}
+.badge-new {position: absolute;font: 22px/25px 'bebas_neuebold',sans-serif;background: #ff5f4b;color: #fff;padding: 3px 8px;}
+.cat-item.cat-item-xsm .cat-sale {bottom: 220px;left: 75px;}
+.cat-item:hover {z-index: 3;}
+.cat-popup-preview {position: absolute;left: 0;top: 0;overflow: hidden;opacity: 0;transition: all .25s linear;width: 230px;background-color: #fff;-moz-box-shadow: 0 5px 98px #211818;-webkit-box-shadow: 0 5px 98px #211818;box-shadow: 0 5px 98px #211818;z-index: 2;}
+.cat-item:hover .cat-popup-preview {width: 270px;left: -20px;top: -10px;overflow: visible;opacity: 1;}
+.cat-popup-preview .cat-item-xsm {margin-left: 0;padding: 10px 0 0;width: 230px;margin: auto;position: relative;}
+.cat-popup-cart {background: #ff5f4b;position: relative;transition: all .25s linear;}
+.cat-item:hover .cat-popup-cart {padding: 15px;}
+.cat-popup-cart:before {content: "";position: absolute;left: 50%;top: -24px;width: 0;height: 0;border: outset transparent;border-width: 12px 16px;margin-left: -16px;border-bottom-color: #ff5f4b;border-bottom-style: solid;}
