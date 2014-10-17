@@ -381,3 +381,4 @@ textarea.field {resize: none;overflow: auto;}
 .basket-sm {display: block;width: 45px;height: 45px;border: 5px solid #fff;margin: auto;text-indent: -9999px;overflow: hidden;text-align: left;background: url(../images/bg/basket-sm.png) 50% no-repeat;border-radius: 28px;}
 .cat-popup-label {font: 27px/30px 'bebas_neuebold',sans-serif;text-align: center;color: #fff;padding: 0 0 10px;}
 .cat-popup-more {display: block;border: 2px solid #fff;text-align: center;width: 100px;text-decoration: none;font: 13px/19px 'bebas_neuebold',sans-serif;text-transform: uppercase;padding: 5px 0;margin: 20px auto 0;color: #fff;}
+.reviews {background: #faddc8;}
