@@ -307,6 +307,26 @@ ms.filter = function() {
   handle.eq(1).attr('data-value', slider_v_2);
 };
 
+ms.product = function() {
+  $('div.product-img').each(function() {
+    var pimg = $(this),
+        pimg_img = $('img.product-image', pimg),
+        pimg_thumb = $('div.product-thumbs a', pimg);
+
+    pimg_thumb.on('click.th', function() {
+      var that = $(this);
+
+      if ( !that.hasClass('current') ) {
+        pimg_thumb.removeClass('current');
+        that.addClass('current');
+        pimg_img.attr('src', that.attr('href'));
+      }
+
+      return false;
+    });
+  });
+};
+
 ms.init = function() {
   ms.promo.init();
   ms.nav();
@@ -314,6 +334,7 @@ ms.init = function() {
   ms.customForm();
   ms.order();
   ms.filter();
+  ms.product();
 
   $('.mask-phone').mask('+7 999 999 99 99');
 };
