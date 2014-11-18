@@ -35,6 +35,7 @@ ms.promo = {
       var promo = $(this),
           promo_bg = $('div.bg-img img'),
           promo_img = $('div.promo-img img'),
+          promo_link = $('a.l-main-more', promo),
           promo_thumb = $('div.promo-thumbs a', promo),
           promo_thumb_len = promo_thumb.length,
           promo_current = promo_thumb.index( promo_thumb.filter('.current').eq(0) ),
@@ -61,6 +62,7 @@ ms.promo = {
         ms.promo.preload(promo_dt, promo_thumb.eq(promo_current).attr('data-img'), promo_thumb.eq(promo_current).attr('data-bg'), function() {
           promo_img.attr('src', promo_thumb.eq(promo_current).attr('data-img'));
           promo_bg.attr('src', promo_thumb.eq(promo_current).attr('data-bg'));
+          promo_link.attr('href', promo_thumb.eq(promo_current).attr('href'));
 
           promo_thumb.removeClass('current');
           promo_thumb.eq(promo_current).addClass('current');

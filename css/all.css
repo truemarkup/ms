@@ -169,7 +169,8 @@ a.header-cart {text-decoration: none;}
 .page-header {color: #3f3535;margin: 0;padding: 15px 0;font: 31px/33px 'bebas_neuebold',sans-serif;}
 .cat {width: 980px;margin-left: -20px; padding-bottom: 50px;}
 .cat-main {margin-left: -15px;padding-bottom: 15px;}
-.cat-item {position: relative;background: #fff;height: 485px;float: left;width: 470px;margin-left: 20px;cursor: pointer;}
+.cat-item {position: relative;background: #fff;height: 485px;float: left;width: 470px;margin-left: 20px;cursor: pointer;overflow: hidden;}
+.cat-item:hover {overflow: visible;}
 a.cat-item {text-decoration: none;}
 .cat-item-xsm {width: 225px;height: 310px;margin-left: 15px;}
 .cat-item-rcn {width: 210px;height: 290px;margin-left: 15px;}
@@ -370,8 +371,8 @@ textarea.field {resize: none;overflow: auto;}
 .slider-label.min {left: 2px;}
 .slider-label.max {right: 2px;}
 .l-load-all {display: block;width: 290px;text-align: center;color: #000;font: 22px/24px 'bebas_neuebold',sans-serif;padding: 10px;text-transform: uppercase;border: 5px solid #ff5f4b;text-decoration: none;margin: 10px auto 0;}
-.badge-popular {position: absolute;font: 22px/25px 'bebas_neuebold',sans-serif;background: #ffed1f;color: #000;padding: 3px 8px;}
-.badge-new {position: absolute;font: 22px/25px 'bebas_neuebold',sans-serif;background: #ff5f4b;color: #fff;padding: 3px 8px;}
+.badge-popular {position: absolute;left: 0;top: 0;font: 22px/25px 'bebas_neuebold',sans-serif;background: #ffed1f;color: #000;padding: 3px 8px;}
+.badge-new {position: absolute;left: 0;top: 0;font: 22px/25px 'bebas_neuebold',sans-serif;background: #ff5f4b;color: #fff;padding: 3px 8px;}
 .product {padding: 30px 35px 35px 25px;background: #fff;margin-top: 15px;}
 .product-img {float: left;width: 420px;position: relative;margin-right: 30px;}
 .product-image {display: block;margin: 0 auto;max-width: 100%;}
@@ -501,3 +502,6 @@ label.error {display: block;font: 11px/13px Arial,sans-serif;color: #f00;margin-
 .fivestar-widget .star.star-5.hover a,
 .fivestar-widget .star.star-5.active a {width: 175px !important;}
 .lab-star {float: left;padding: 8px 15px 0 0;color: #544945;font: 14px/16px 'calibriregular',sans-serif;}
+
+/* update */
+.l-main-more {background: url(../images/bg/l-main-more.png) 100% no-repeat;position: absolute;left: 20px;bottom: 20px;padding: 9px 60px 9px 15px;font: 25px/28px 'bebas_neuebold',sans-serif;text-transform: uppercase;text-decoration: none;color: #fff;border: 4px solid #fff;}
