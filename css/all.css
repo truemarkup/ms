@@ -505,3 +505,5 @@ label.error {display: block;font: 11px/13px Arial,sans-serif;color: #f00;margin-
 
 /* update */
 .l-main-more {background: url(../images/bg/l-main-more.png) 100% no-repeat;position: absolute;left: 20px;bottom: 20px;padding: 9px 60px 9px 15px;font: 25px/28px 'bebas_neuebold',sans-serif;text-transform: uppercase;text-decoration: none;color: #fff;border: 4px solid #fff;}
+.cart-header {padding: 40px 0 10px;}
+.cart-title {display: inline-block;vertical-align: middle;margin-right: 15px;font: 22px/25px 'bebas_neuebold',sans-serif;color: #fff;}
